@@ -1,0 +1,58 @@
+.titulo-animacao {
+    animation: apaga 2s ease-in-out;
+}
+
+.animacao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.span-animacao {
+    width: 1%;
+    background-color: #333;
+    padding: .3rem;
+    border-radius: .3rem;
+    transition: 1s ease-out;
+    animation: pisca 1s infinites 1s;
+    animation: roda 2s ease-in;
+    margin: 0 1rem;
+}
+
+@keyframes roda {
+    50% {
+        transform: translate(-2700%, 0) rotate(3.14rad);
+    }
+
+    to {
+        transform: translate(-0%, 0) rotate(3.14rad);
+    }
+}
+
+@keyframes apaga {
+    50% {
+        opacity: 0;
+        color: #fff;
+
+    }
+
+    75% {
+        opacity: .5;
+        color: #333;
+
+    }
+
+    to {
+        opacity: 1;
+        color: #333;
+    }
+}
+
+@keyframes pisca {
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
