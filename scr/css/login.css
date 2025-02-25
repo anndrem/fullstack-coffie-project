@@ -23,6 +23,7 @@
         z-index: 1;
 
         h1 {
+            font-size: 2rem;
             color: white;
             margin: 0 1rem 0;
         }
