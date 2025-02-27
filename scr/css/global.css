@@ -12,7 +12,7 @@
 }
 
 body {
-    height: 100vh;
+    width: 100%;
     background-color: orange;
     display: flex;
     flex-direction: column;
