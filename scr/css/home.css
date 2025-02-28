@@ -64,10 +64,11 @@ a {
 
 
 .container-produtos {
-    padding: 1rem;
+    padding: 1rem 0;
     text-align: center;
     background-color: #333;
     width: 100%;
+    position: relative;
 
     h1 {
         margin: 0 2rem 0;
@@ -76,20 +77,64 @@ a {
     }
 
     .produtos-titulo {
-        h1::after {
-            content: "";
-            display: block;
-            height: .2rem;
-            width: 50%;
-            background-color: white;
-            justify-self: center;
+
+        .titulo-txt {
+            h1::after {
+                content: "";
+                display: block;
+                height: .2rem;
+                width: 50%;
+                background-color: white;
+                justify-self: center;
+            }
+        }
+
+        .titulo-switch {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                color: white;
+                font-size: 2rem;
+            }
+            .escolhido {
+                color: orange;
+            }
+            .escolhido::after {
+                content: "";
+                display: block;
+                height: .2rem;
+                width: 100%;
+                transform: scaleX(1);
+                background-color: white;
+                transition: .2s ease-in-out;
+            }
+
+
+            .switch {
+                margin: 2.5rem 1.5rem;
+                background-color: #fff;
+
+                .switch-opt {
+                    background-color: #333;
+                }
+            }
+        }
+
+
+        .switch {
+            display: flex;
+            align-self: center;
+
         }
     }
 
     .container-cards {
         margin: 4rem 0 0;
         width: 100%;
-        padding: .5rem;
+        padding: .5rem 0;
         display: flex;
         justify-content: space-around;
 

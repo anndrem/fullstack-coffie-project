@@ -41,56 +41,94 @@
     </div>
     <div class="container-produtos" id="sobre">
         <div class="produtos-titulo">
-            <h1>Pratos</h1>
-        </div>
-        <div class="container-cards">
-            <div class="card">
-                <div class="img"> <img src="imgs/undraw_breakfast_rgx5.svg" alt=""></div>
-                <div class="produto-info">
-                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p> </h2>
-                    <a href="#"><button class="btn">Saiba Mais</button></a>
-                </div>
+            <div class="titulo-txt">
+                <h1>Pratos </h1>
             </div>
-            <div class="card">
-                <div class="img"> <img src="imgs/undraw_breakfast_rgx5.svg" alt=""></div>
-                <div class="produto-info">
-                    <h2>Pão na Chapa<p class="txt-preco">R$25,00 </p> </h2>
-                    <a href="#"><button class="btn">Saiba Mais</button></a>
+
+            <div class="titulo-switch">
+                <h2 class="swt-txt swt-almoco escolhido">Almoço</h2>
+                <div class="switch">
+                    <div class="switch-opt"></div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="img"> <img src="imgs/undraw_breakfast_rgx5.svg" alt=""></div>
-                <div class="produto-info">
-                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p> </h2>
-                    <a href="#"><button class="btn">Saiba Mais</button></a>
-                </div>
+                <h2 class="swt-txt swt-cafe">Café da Manha</h2>
             </div>
         </div>
         <div class="container-cards">
             <div class="card">
                 <div class="img"> <img src="imgs/undraw_breakfast_rgx5.svg" alt=""></div>
                 <div class="produto-info">
-                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p> </h2>
+                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p>
+                    </h2>
                     <a href="#"><button class="btn">Saiba Mais</button></a>
                 </div>
             </div>
             <div class="card">
                 <div class="img"> <img src="imgs/undraw_breakfast_rgx5.svg" alt=""></div>
                 <div class="produto-info">
-                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p> </h2>
+                    <h2>Pão na Chapa<p class="txt-preco">R$25,00 </p>
+                    </h2>
                     <a href="#"><button class="btn">Saiba Mais</button></a>
                 </div>
             </div>
             <div class="card">
                 <div class="img"> <img src="imgs/undraw_breakfast_rgx5.svg" alt=""></div>
                 <div class="produto-info">
-                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p> </h2>
+                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p>
+                    </h2>
+                    <a href="#"><button class="btn">Saiba Mais</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-cards">
+            <div class="card">
+                <div class="img"> <img src="imgs/undraw_breakfast_rgx5.svg" alt=""></div>
+                <div class="produto-info">
+                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p>
+                    </h2>
+                    <a href="#"><button class="btn">Saiba Mais</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img"> <img src="imgs/undraw_breakfast_rgx5.svg" alt=""></div>
+                <div class="produto-info">
+                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p>
+                    </h2>
+                    <a href="#"><button class="btn">Saiba Mais</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img"> <img src="imgs/undraw_breakfast_rgx5.svg" alt=""></div>
+                <div class="produto-info">
+                    <h2>Pão na Chapa<p class="txt-preco">R$25,00</p>
+                    </h2>
                     <a href="#"><button class="btn">Saiba Mais</button></a>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <script>
+        const swt = document.querySelector('.switch-opt')
+        const almoco = document.querySelector('.swt-almoco')
+        const cafe = document.querySelector('.swt-cafe')
+        swt.addEventListener('click', () => {
+            swt.classList.toggle('active');
+
+            if (swt.classList.contains('active')) {
+                cafe.classList.add('escolhido')
+                almoco.classList.remove('escolhido')
+                console.log(cafe)
+            } else {
+                almoco.classList.add('escolhido')
+                cafe.classList.remove('escolhido')
+                console.log(almoco)
+
+            }
+        })
+
+
+    </script>
 </body>
 
 </html>
