@@ -92,25 +92,35 @@ a {
         .titulo-switch {
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
 
             h2 {
                 color: white;
                 font-size: 2rem;
             }
+
+            .swt-txt {
+                width: 10%;
+                padding: 1rem 0;
+                opacity: .5;
+                border: .1rem solid;
+                border-radius: .5rem;
+                border-color: #fff;
+                box-shadow: .5rem .5rem .1rem;
+            }
+
             .escolhido {
                 color: orange;
+                transition: .5s ease-in-out;
+                font-weight: bold;
+                opacity: 1;
+                border-radius: .5rem;
+                border: .1rem solid;
+                border-color: orange;
+                box-shadow: .5rem .5rem .1rem;
             }
-            .escolhido::after {
-                content: "";
-                display: block;
-                height: .2rem;
-                width: 100%;
-                transform: scaleX(1);
-                background-color: white;
-                transition: .2s ease-in-out;
-            }
+
 
 
             .switch {

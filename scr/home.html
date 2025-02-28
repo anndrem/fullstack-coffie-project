@@ -46,11 +46,11 @@
             </div>
 
             <div class="titulo-switch">
-                <h2 class="swt-txt swt-almoco escolhido">Almoço</h2>
+                <h2 class="swt-txt swt-almoco escolhido"><i class="fa-solid fa-bowl-food"></i></h2>
                 <div class="switch">
                     <div class="switch-opt"></div>
                 </div>
-                <h2 class="swt-txt swt-cafe">Café da Manha</h2>
+                <h2 class="swt-txt swt-cafe"><i class="fa-solid fa-mug-hot"></i></h2>
             </div>
         </div>
         <div class="container-cards">
@@ -109,21 +109,23 @@
     </div>
 
     <script>
-        const swt = document.querySelector('.switch-opt')
-        const almoco = document.querySelector('.swt-almoco')
-        const cafe = document.querySelector('.swt-cafe')
+        const $ = (element) => {
+            return document.querySelector(element)
+        }
+
+        const swt = $('.switch-opt')
+        const almoco = $('.swt-almoco')
+        const cafe = $('.swt-cafe')
+
         swt.addEventListener('click', () => {
             swt.classList.toggle('active');
 
             if (swt.classList.contains('active')) {
                 cafe.classList.add('escolhido')
                 almoco.classList.remove('escolhido')
-                console.log(cafe)
             } else {
                 almoco.classList.add('escolhido')
                 cafe.classList.remove('escolhido')
-                console.log(almoco)
-
             }
         })
 
