@@ -56,3 +56,20 @@
         opacity: 1;
     }
 }
+
+@media only screen and (max-device-width: 480px) {
+    .animacao {
+        text-align: center;
+    }
+    .titulo-animacao, .span-animacao {
+        animation: none;
+    }
+
+    .span-animacao {
+        display: none;
+        width: 0;
+    }
+    .titulo-animacao {
+        width: 100%;
+    }
+}

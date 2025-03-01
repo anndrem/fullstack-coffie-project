@@ -8,10 +8,12 @@
     .voltar-home {
         position: absolute;
         z-index: 2;
+
         a {
             color: white;
         }
-        a:hover{
+
+        a:hover {
             cursor: pointer;
         }
     }
@@ -71,7 +73,7 @@
                 justify-content: center;
 
                 img {
-                    height: calc(100%-30%);
+                    height: 100%;
                 }
             }
         }
@@ -161,5 +163,16 @@
         }
 
 
+    }
+}
+
+@media only screen and (max-device-width: 500px) {
+    .container .container-login .titulo {
+        width: 0%;
+        display: none;
+    }
+
+        .container .container-login form {
+        width: 100%;
     }
 }

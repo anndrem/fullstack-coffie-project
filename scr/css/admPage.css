@@ -69,3 +69,9 @@ table {
     }
 
 }
+
+@media only screen and (max-device-width: 500px) {
+    h1 {
+        font-size: 2rem;
+    }
+}

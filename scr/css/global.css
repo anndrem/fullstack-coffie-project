@@ -43,7 +43,7 @@ h1 {
 }
 
 .menu-list {
-    position:fixed;
+    position: fixed;
     top: 0;
     z-index: 2;
     width: 100%;
@@ -57,11 +57,12 @@ h1 {
         list-style: none;
         height: 100%;
 
-        .logo{
+        .logo {
             opacity: 1;
+
             a {
-            color: orange;
-                
+                color: orange;
+
             }
         }
 
@@ -78,25 +79,28 @@ h1 {
             .btn {
                 font-size: .4rem;
             }
+
             i {
                 margin: 0 1rem;
             }
         }
-        li:after{
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    height: .2rem;
-                    width: 100%;
-                    transform: scaleX(0);
-                    background-color: white;
-                    transition: .5s ease-in-out;
-                    bottom: calc(-50%);
+
+        li:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: .2rem;
+            width: 100%;
+            transform: scaleX(0);
+            background-color: white;
+            transition: .5s ease-in-out;
+            bottom: calc(-50%);
         }
 
-        li:hover{
+        li:hover {
             opacity: 1;
         }
+
         li:hover::after {
             transform: scaleX(1);
         }
@@ -108,6 +112,7 @@ h1 {
 
     }
 }
+
 a {
     transition: .5s ease-in;
     text-decoration: none;
@@ -143,5 +148,53 @@ a {
 
     .active {
         left: calc(100% - 50%);
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    body {
+        position: relative;
+    }
+    h1,
+    h2 {
+        font-size: calc(100% - 5%);
+    }
+
+    .menu-list {
+        position: absolute;
+        height: 100%;
+        width: 5%;
+        background: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-list ul {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        li {
+            display: none;
+            text-align: center;
+
+            a {
+                color: #333;
+            }
+
+        }
+        li:after {
+            background-color: #333;
+            height: 150%;
+            width: 5%;
+            left: 92%;
+        }
+        
+    }
+
+    .btn {
+        width: 100%;
+        font-size: .7rem;
+        padding: .5rem;
     }
 }
