@@ -59,6 +59,7 @@ h1 {
 
         .logo {
             opacity: 1;
+            display: none;
 
             a {
                 color: orange;
@@ -154,7 +155,9 @@ a {
 @media only screen and (max-device-width: 480px) {
     body {
         position: relative;
+        background: #333;
     }
+
     h1,
     h2 {
         font-size: calc(100% - 5%);
@@ -162,8 +165,8 @@ a {
 
     .menu-list {
         position: absolute;
-        height: 100%;
-        width: 5%;
+        height: 5%;
+        width: 12%;
         background: #fff;
         margin: 0;
         padding: 0;
@@ -172,24 +175,33 @@ a {
     .menu-list ul {
         display: flex;
         flex-direction: column;
-        position: relative;
+        position: absolute;
+        transition: .5s ease-in;
+        text-align: center;
 
-        li {
+
+        .item {
             display: none;
             text-align: center;
 
             a {
                 color: #333;
             }
-
         }
-        li:after {
+
+        .logo {
+            display: block;
+        }
+
+
+        .item:after {
             background-color: #333;
-            height: 150%;
+            height: 100%;
             width: 5%;
+            top: 0%;
             left: 92%;
         }
-        
+
     }
 
     .btn {
@@ -197,4 +209,6 @@ a {
         font-size: .7rem;
         padding: .5rem;
     }
+
+   
 }
