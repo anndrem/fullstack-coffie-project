@@ -71,6 +71,10 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
+                flex-direction: column;
+                text-align: center;
+
+
 
                 img {
                     height: 100%;
@@ -79,12 +83,20 @@
         }
 
         form {
+
             width: 50%;
+            height: 50%;
             display: flex;
+            align-self: center;
+            justify-self: center;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            border-radius: .3rem;
+
+
         }
+
 
         .input-label {
             margin: .2rem 0 1rem;
@@ -115,7 +127,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 100%;
+            width: 70%;
             margin: 1rem 0;
             position: relative;
 
@@ -172,7 +184,7 @@
         display: none;
     }
 
-        .container .container-login form {
+    .container .container-login form {
         width: 100%;
     }
 }
