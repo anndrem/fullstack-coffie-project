@@ -1,4 +1,23 @@
 <?php
+require "../phpScript/conexao.php";
+$sqlCafe = "SELECT * FROM produtos p JOIN tbl_tipos t ON t.id_tipo = p.tipo WHERE t.id = 1";
+
+$resultCafe = $conn->query($sql1);
+
+if ($resultCafe->num_rows > 0)
+    $produtosCafe = $resultCafe->fetch_all(MYSQLI_ASSOC);
+else
+    $produtosCafe = []; //define um array vazio se não houver resultados
+
+$sqlAlmoco = "SELECT * FROM produtos p JOIN tbl_tipos t ON t.id_tipo = p.tipo WHERE t.id = 2 ORDER BY p.preco";
+$resultCafe = $conn->query($sql2);
+    
+if ($resultAlmoco->num_rows > 0)
+    $produtosAlmoco = $resultAlmoco->fetch_all(MYSQLI_ASSOC);
+else
+    $produtosAlmoco = []; //define um array vazio se não houver resultados
+
+
 $produtosCafe = [
     [
         'nome' => "Café completo",
