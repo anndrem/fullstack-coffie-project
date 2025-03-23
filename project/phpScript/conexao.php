@@ -1,5 +1,5 @@
 <?php
-header('content-type: text\html; charset=utf8');
+header('../src/index.php', true);
 
 $str_conn = [
         'servidor' => 'localhost',
