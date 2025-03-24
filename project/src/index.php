@@ -1,5 +1,5 @@
 <?php
-require "../phpScript/conexao.php" ;
+require "../phpScript/conexao.php";
 
 
 $sqlCafe = "SELECT * FROM tbl_produto p JOIN tbl_tipo t ON t.id_tipo = p.id_tipo WHERE t.id_tipo = 1";
@@ -12,7 +12,7 @@ else
 
 $sqlAlmoco = "SELECT * FROM tbl_produto p JOIN tbl_tipo t ON t.id_tipo = p.id_tipo WHERE t.id_tipo = 2 ORDER BY p.preco";
 $resultAlmoco = $conn->query($sqlAlmoco, 1);
-    
+
 if ($resultAlmoco->num_rows > 0)
     $produtosAlmoco = $resultAlmoco->fetch_all(MYSQLI_ASSOC);
 else
@@ -83,7 +83,7 @@ $produtosAlmoco = [
                 <a href="login.html" alt="Login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </li>
             <li class="item">
-                <a href="" value="criar conta"><i class="fa-solid fa-user-plus"></i></a>
+                <a href="cadastro.html" value="criar conta"><i class="fa-solid fa-user-plus"></i></a>
             </li>
         </ul>
     </div>
@@ -92,6 +92,7 @@ $produtosAlmoco = [
             <div class="animacao">
                 <h1 class="titulo-text titulo-animacao">Coffe do lil Bro</h1>
                 <span class="span-animacao"></span>
+
             </div>
             <a href="login.html"><button class="btn titulo-btn">Entrar</button></a>
         </div>
@@ -151,6 +152,7 @@ $produtosAlmoco = [
             </div>
         </div>
     </div>
+
 
     <script src="menu-responsive.js"></script>
     <script src="switch.js"></script>

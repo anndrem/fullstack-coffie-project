@@ -41,7 +41,27 @@ join
 	tbl_tipo t
 on 	t.id_tipo = p.id_tipo;
 
-select * from vw_ProdutoTipo;
+create table if not exists tbl_nivel (
+id_nivel		tinyint primary key auto_increment,
+titulo			enum('Adimin', 'Usuario') not null unique key
+);
 
+insert into tbl_nivel
+(titulo)
+values 
+('Adimin'),
+('Usuario');
+
+create table if not exists tbl_usuario (
+id_usuario		tinyint 		primary key,
+id_nivel		tinyint			not null,
+nome			varchar(244)	not null,
+username		varchar(20)		not null unique key,
+senha			varchar(20)		not null,
+tel				varchar(11)		not null,
+email			varchar(244)	not null,
+
+foreign key(id_nivel) references tbl_nivel(id_nivel)
+);
 
 

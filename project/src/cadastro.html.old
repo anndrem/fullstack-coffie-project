@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/login.css">
-    <title>coffe | login</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>coffe | cadastro</title>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                 <a href="login.html" alt="Login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </li>
             <li class="item">
-                <a href="cadastro.html" value="criar conta"><i class="fa-solid fa-user-plus"></i></a>
+                <a href="" value="criar conta"><i class="fa-solid fa-user-plus"></i></a>
             </li>
         </ul>
     </div>
@@ -34,7 +34,7 @@
                 <a href="home.html"><i class="fa-solid fa-right-to-bracket"></i></a>
             </div>
             <div class="titulo-txt">
-                <h1>Login </h1>
+                <h1>Cadastre-se </h1>
             </div>
             <div class="titulo">
 
@@ -44,20 +44,37 @@
             </div>
 
             <form action="" method="post">
-                <div class="input-label">
-                    <div class="lbline">
-                        <h2>user</h2>
+                <div class="container-cad">
+                    <div class="input-label">
+                        <div class="lbline">
+                            <h2>Nome</h2>
+                        </div>
+                        <input type="text" name="nometxt" id="user-txt-nome" placeholder="">
                     </div>
-                    <input type="text" name="username" id="user-txt-user" placeholder="">
+                    <div class="input-label">
+                        <div class="lbline">
+                            <h2>email</h2>
+                        </div>
+                        <input type="text" name="email" id="user-txt-email" placeholder="">
+                    </div>
                 </div>
-                <div class="input-label">
-                    <div class="lbline">
-                        <h2>Senha</h2>
+
+                <div class="container-cad">
+                    <div class="input-label">
+                        <div class="lbline">
+                            <h2>user</h2>
+                        </div>
+                        <input type="text" name="cad_username" id="user-txt-cad_user" placeholder="">
                     </div>
-                    <input type="password" name="senha" id="user-txt-senha" placeholder="">
+                    <div class="input-label">
+                        <div class="lbline">
+                            <h2>Senha</h2>
+                        </div>
+                        <input type="password" name="cad_senha" id="user-txt-cad_senha" placeholder="">
+                    </div>
                 </div>
                 <div class="bnt-submit">
-                    <input type="submit" value="entrar" class="btn">
+                    <input type="submit" value="Cadastrar" class="btn">
                 </div>
             </form>
 

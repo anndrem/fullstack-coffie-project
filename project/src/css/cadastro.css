@@ -91,7 +91,12 @@
             justify-self: center;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
+
+            position: relative;
+
+            .container-cad {
+                padding: 0 1rem 0 0;
+            }
         }
 
 
@@ -126,7 +131,8 @@
             justify-content: center;
             width: 70%;
             margin: 1rem 0;
-            position: relative;
+            position: absolute;
+            bottom: 0;
 
             .btn {
                 position: absolute;

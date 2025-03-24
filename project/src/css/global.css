@@ -151,7 +151,15 @@ a {
         left: calc(100% - 50%);
     }
 }
+span {
+    padding: 1rem;
+    border-radius: .3rem;
+    background-color: white;
+    color: #333;
+}
 
+
+/* mobile */
 @media only screen and (max-device-width: 480px) {
     body {
         position: relative;

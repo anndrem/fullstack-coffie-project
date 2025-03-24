@@ -1,5 +1,5 @@
 <?php
-header('../src/index.php', true);
+// header('../src/index.php', true);
 
 $str_conn = [
         'servidor' => 'localhost',
@@ -14,6 +14,6 @@ if (!$conn) {
     echo "Erro ao conectar" .mysqli_connect_error();
     exit;
 } else {
-    echo "Concetado com sucessp";
+    echo "Concetado com sucesso";
 }
 ?>
