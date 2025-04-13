@@ -18,7 +18,6 @@ if ($resultAlmoco->num_rows > 0)
 else
     $produtosAlmoco = []; //define um array vazio se não houver resultados
 
-
 $produtosCafe = [
     [
         'nome' => "Café completo",
@@ -57,7 +56,7 @@ $produtosAlmoco = [
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -66,7 +65,7 @@ $produtosAlmoco = [
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/animacao-home.css">
-    <title>Document</title>
+    <title>Coffe lil Bro</title>
 </head>
 
 <body>
@@ -83,7 +82,7 @@ $produtosAlmoco = [
                 <a href="login.html" alt="Login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
             </li>
             <li class="item">
-                <a href="cadastro.html" value="criar conta"><i class="fa-solid fa-user-plus"></i></a>
+                <a href="cadastro.php" value="criar conta"><i class="fa-solid fa-user-plus"></i></a>
             </li>
         </ul>
     </div>

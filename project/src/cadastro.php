@@ -1,20 +1,3 @@
-<?php
-include '../phpScript/conexao.php';
-
-
-// $cad_txt = [
-//     $nome => $_POST['nometxt'] ?? '',
-//     $email => $_POST['emailtxt'] ?? '',
-//     $cad_username => $_POST['cad_username'] ?? '',
-//     $cad_senha => $_POST['cad_senha'] ?? '',
-// ];
-
-// foreach ($cad_txt as $key => $value) {
-//     if (empty($value)) {
-//         die("Error: O campo {$key} não pode estar vazio");
-//     }
-// }
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -35,7 +18,7 @@ include '../phpScript/conexao.php';
                     <i class="fa-solid fa-mug-saucer"></i>
                 </a>
             </li>
-            <li class="item"><a href="home.php">home</a></li>
+            <li class="item"><a href="index.php">home</a></li>
             <li class="item"><a href="#sobre">quem somos</a></li>
             <li class="item">
                 <a href="login.html" alt="Login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
@@ -66,13 +49,13 @@ include '../phpScript/conexao.php';
                         <div class="lbline">
                             <h2>Nome</h2>
                         </div>
-                        <input type="text" name="nometxt" id="user-txt-nome" placeholder="">
+                        <input class="input_cad" type="text" name="nometxt" id="user-txt-nome" placeholder="">
                     </div>
                     <div class="input-label">
                         <div class="lbline">
                             <h2>email</h2>
                         </div>
-                        <input type="text" name="emailtxt" id="user-txt-email" placeholder="">
+                        <input class="input_cad" type="text" name="emailtxt" id="user-txt-email" placeholder="">
                     </div>
                 </div>
 
@@ -81,13 +64,14 @@ include '../phpScript/conexao.php';
                         <div class="lbline">
                             <h2>user</h2>
                         </div>
-                        <input type="text" name="cad_username" id="user-txt-cad_user" placeholder="">
+                        <input class="input_cad" type="text" name="cad_username" id="user-txt-cad_user" placeholder="">
                     </div>
                     <div class="input-label">
                         <div class="lbline">
                             <h2>Senha</h2>
                         </div>
-                        <input type="password" name="cad_senha" id="user-txt-cad_senha" placeholder="">
+                        <input class="input_cad" type="password" name="cad_senha" id="user-txt-cad_senha"
+                            placeholder="">
                     </div>
                 </div>
                 <div class="bnt-submit">
@@ -96,9 +80,9 @@ include '../phpScript/conexao.php';
             </form>
 
             <div class="aviso-span">
-                <span class="aviso">
+                <p class="aviso">
                     Conectado com sucesso
-                </span>
+                </p>
             </div>
 
             <div class="redesociais">
@@ -111,6 +95,26 @@ include '../phpScript/conexao.php';
         </div>
 
         <script src="menu-responsive.js"></script>
+        <script src="span.js"></script>
 </body>
 
 </html>
+<?php
+include '../phpScript/conexao.php';
+
+if (empty($_POST['nometxt']) && empty($_POST['emailtxt']) && empty($_POST['cad_user']) && empty($_POST['cad_senha'])) {
+    // $nome = $_POST['nometxt'];
+    // $email = $_POST['emailtxt'];
+    // $cad_username = $_POST['cad_username'];
+    // $cad_senha = $_POST['cad_senha'];
+
+} else {
+    $nome = $_POST['nometxt'];
+    $email = $_POST['emailtxt'];
+    $cad_username = $_POST['cad_username'];
+    $cad_senha = $_POST['cad_senha'];
+    echo "error";
+}
+
+
+?>

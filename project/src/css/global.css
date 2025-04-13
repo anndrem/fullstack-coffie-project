@@ -151,13 +151,30 @@ a {
         left: calc(100% - 50%);
     }
 }
-span {
-    padding: 1rem;
+
+.aviso-span {
+    visibility: hidden;
     border-radius: .3rem;
     background-color: white;
     color: #333;
+
+    p {
+        padding: .5rem;
+
+    }
 }
 
+.btn.disable {
+    background-color: gray;
+    color: #333;
+    border: gray;
+}
+
+.btn.disable:hover {
+    cursor: not-allowed;
+    background-color: gray;
+    color: #333;
+}
 
 /* mobile */
 @media only screen and (max-device-width: 480px) {
@@ -218,5 +235,5 @@ span {
         padding: .5rem;
     }
 
-   
+
 }
